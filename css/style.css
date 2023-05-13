@@ -412,7 +412,7 @@ section {
     justify-content: center;
     text-align: center;
     padding: 0 40px;
-    transition: height 0.5s;
+    transition: cubic-bezier(0.4, 0, 0.11, 1.67) 1s;
     flex-direction: column;
 }
 
@@ -640,6 +640,11 @@ form textarea {
     .dropdown_menu {
         left: 2rem;
         width: unset;
+    }
+
+    .home {
+        justify-content: flex-end;
+        margin-right: 0;
     }
 }
 

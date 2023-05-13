@@ -1,4 +1,4 @@
-g<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,9 +10,18 @@ g<!DOCTYPE html>
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init("user_4DTMws8LQh1mG0OhC");
+            })();
+        </script>
+
     <title>Document</title>
 </head>
 
@@ -20,18 +29,18 @@ g<!DOCTYPE html>
     <!--Header -->
 
     <header class="navbar">
-            <div class="logo"><a href="">Gim_dev</a></div>
-            <ul class="links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contacts</a></li>
-            </ul>
-            <a href="" class="action_btn">Start</a>
-            <div class="toggle_btn">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+        <div class="logo"><a href="">Gim_dev</a></div>
+        <ul class="links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contacts</a></li>
+        </ul>
+        <a href="" class="action_btn">Start</a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
         </div>
 
         <div class="dropdown_menu">
@@ -122,29 +131,32 @@ g<!DOCTYPE html>
         <div class="portfolio-content">
             <!-- pj1 -->
             <div class="row">
-                <img src="/imgs/ml.jpeg" alt="">
+                <img src="/imgs/calc.PNG" alt="">
                 <div class="layer">
                     <h5>Calcolatrice Js</h5>
-                    <p>Descrizione da inserire.</p>
-                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <p>Progetto calcolatrice js.</p>
+                    <a target="_blank" href="https://github.com/Jim2510/Calculator"><i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
             <!-- pj2 -->
             <div class="row">
-                <img src="/imgs/ml.jpeg" alt="">
+                <img src="/imgs/Cattura.PNG" alt="">
                 <div class="layer">
-                    <h5>Progetti web design</h5>
-                    <p>Descrizione da inserire.</p>
-                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <h5>Counter</h5>
+                    <p>Progetto counter js.</p>
+                    <a target="_blank" href="https://github.com/Jim2510/Counter"><i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
             <!-- pj3 -->
             <div class="row">
-                <img src="/imgs/ml.jpeg" alt="">
+                <img src="/imgs/form.jpg" alt="">
                 <div class="layer">
-                    <h5>Progetti web design</h5>
-                    <p>Descrizione da inserire.</p>
-                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <h5>Esempio validazione form.</h5>
+                    <p>Progetto registration form funzionante.</p>
+                    <a target="_blank" href="https://github.com/Jim2510/registrationForm"><i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
             <!-- pj4 -->
@@ -190,19 +202,21 @@ g<!DOCTYPE html>
                 <li><a href="#">Link Share & Subscribe</a></li>
             </div>
             <div class="contact-icons">
-                <a href=""><i class="fa-brands fa-github"></i></a>
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-reddit"></i></a>
+                <a target="_blank" href="https://github.com/Jim2510"><i class="fa-brands fa-github"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/gianmarco-guglielmino-4803a1221/"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a target="_blank" href="https://www.instagram.com/james.2510/"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a target="_blank" href=""><i class="fa-brands fa-reddit"></i></a>
             </div>
         </div>
         <div class="contact-form">
             <form action="">
-                <input type="name" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email Address" required>
-                <input type="" placeholder="Your Mobile Number" required>
-                <textarea name="" id="" cols="35" rows="10" placeholder="How Can I Help You?" required></textarea>
-                <input type="submit" value="Send Message" class="submit" required>
+                <input id="fullName" type="name" placeholder="Your Name" required>
+                <input id="email_id" type="email" placeholder="Your Email Address" required>
+                <input id="phone_number" type="text" placeholder="Your Mobile Number" required>
+                <textarea name="" id="message" cols="35" rows="10" placeholder="How Can I Help You?" required></textarea>
+                <input onclick="sendMail()" type="submit" value="Send Message" class="submit" required>
             </form>
         </div>
     </section>
@@ -217,7 +231,8 @@ g<!DOCTYPE html>
     </section>
 
 
-    <script src="/script.js"></script>
+    <script src="/script/script.js"></script>
+    
 </body>
 
 </html>

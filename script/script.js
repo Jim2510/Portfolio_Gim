@@ -10,3 +10,15 @@ toggleBtn.onclick = function () {
   ? 'fa-solid fa-xmark'
   : 'fa-solid fa-bars'
 }
+
+function sendMail() {
+  var params = {
+    from_name : document.getElementbyId('fullName').value,
+    email_id : document.getElementById('email_id').value,
+    message : document.getElementById('message').value,
+    phone_number : document.getElementById('phone_number').value
+  }
+  emailjs.send('service_5r2ot1w', 'template_urfoice', params).then(function (res){
+    alert('success!' + res.status)
+  })
+}
