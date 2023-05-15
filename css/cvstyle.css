@@ -1,16 +1,22 @@
 body {
     background-image: url(/imgs/Meteor.svg) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .container_info {
     width: 80%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.541);
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.034);
     backdrop-filter: blur(15px);
     margin: 0 auto;
     display: block;
     margin-top: 100px;
-    border-radius: 15px;
+    border-radius: 15px;  
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+    padding-left: 90px;
+    padding-right: 90px;
 }
 
 .wim {
@@ -22,3 +28,32 @@ body {
 h2 {
     margin-top: 30px;
 }
+
+.line {
+    margin-top: 30px;
+}
+
+.tx {
+    margin-top: 30px;
+}
+
+.cnt {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.ph {
+    margin: 30px auto;
+    background-color: wheat;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+p {
+    font-size: 22px;
+}
+
