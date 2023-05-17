@@ -15,8 +15,8 @@ body {
     border-radius: 15px;  
     margin-bottom: 100px;
     padding-bottom: 50px;
-    padding-left: 90px;
-    padding-right: 90px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .wim {
@@ -35,7 +35,7 @@ h2 {
 
 .tx {
     margin-top: 30px;
-    text-align: center;
+    text-align: justify;
     padding-right: 150px;
     padding-left: 150px;
 }
@@ -51,8 +51,8 @@ h2 {
 .ph {
     margin: 30px auto;
     background-color: wheat;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 }
 
@@ -63,5 +63,25 @@ p {
 @media (max-width: 920px) {
     .tx {
         padding: 0;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .ph {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .ph {
+        width: 100px;
+        height: 100px;
     }
 }
