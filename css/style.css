@@ -689,6 +689,7 @@ form textarea {
 
     .home {
         justify-content: flex-end;
-        margin-right: 0;
+        margin-left: 0;
+        padding-left: 10px;
     }
 }
