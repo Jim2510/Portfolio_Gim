@@ -2,11 +2,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
 }
+
+/* VAR */
 
 :root {
     --bg-color: #1d1d1d;
@@ -24,7 +26,9 @@ body {
     color: var(--text-color);
 }
 
- header {
+/* NAVBAR */
+
+header {
     position: sticky;
     top: 0;
     z-index: 10000;
@@ -32,12 +36,10 @@ body {
     background: #07070777;
     backdrop-filter: blur(15px);
     width: 100%;
-} 
+}
 
-
-/* NAVBAR */
 .navbar {
-    width: 100%; 
+    width: 100%;
     height: 60px;
     margin: 0 auto;
     display: flex;
@@ -85,7 +87,7 @@ body {
     scale: 0.95;
 }
 
-/* Menu Dropdown */
+/* MENU DROPDOWN */
 
 .dropdown_menu {
     display: none;
@@ -158,7 +160,8 @@ section {
     padding: 160px 15% 120px;
 }
 
-/* First Section */
+/* FIRST SECTION (HOME) */
+
 .home {
     position: relative;
     height: 100vh;
@@ -169,6 +172,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    padding-left: 200px;
 }
 
 .slide {
@@ -268,6 +272,8 @@ section {
     transform: scale(1.1) translateY(5px);
 }
 
+/* SECOND SECTION (ABOUT) */
+
 .about {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -302,6 +308,8 @@ section {
     margin-bottom: 4rem;
 }
 
+/* 3RD SECTION (SERVICES) */
+
 .services {
     background: url(../imgs/Meteor\ \(3\).svg);
     background-repeat: no-repeats;
@@ -331,6 +339,8 @@ section {
     gap: 2.5rem;
     margin-top: 5rem;
 }
+
+/* SERVICES CARDS */
 
 .box {
     background: #000000b0;
@@ -382,6 +392,8 @@ section {
     cursor: pointer;
 }
 
+/* 4TH SECTION */
+
 .portfolio-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, auto));
@@ -404,10 +416,12 @@ section {
     transition: transform 0.5s;
 }
 
+/* LAYER CARDS */
+
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.1), var(--main-color));
+    background: linear-gradient(rgba(0, 0, 0, 0.233), #0f0f0f);
     position: absolute;
     border-radius: 8px;
     left: 0;
@@ -454,6 +468,22 @@ section {
 .row:hover .layer {
     height: 100%;
 }
+
+.git-link {
+    color: white;
+    background-color: #1bb630;
+    border-radius: 10px;
+    padding: 3px 8px;
+    transition: all .45s ease;
+}
+
+.git-link:hover {
+    letter-spacing: 1px;
+    background: #1bb630b9;
+    color: var(--text-color);
+}
+
+/* 5TH SECTION (CONTACTS) */
 
 .contact {
     background: url(../imgs/Meteor\ \(1\).svg);
@@ -503,6 +533,8 @@ section {
     transform: translateX(5px);
 }
 
+/* SOCIAL BUTTONS */
+
 .contact-icons i {
     height: 45px;
     width: 45px;
@@ -526,7 +558,7 @@ section {
     position: relative;
 }
 
-.contact-form form input, 
+.contact-form form input,
 form textarea {
     width: 100%;
     padding: 14px;
@@ -581,6 +613,8 @@ form textarea {
     background: var(--main-color);
 }
 
+/*RESPONSIVE STYLE */
+
 @media (max-width: 1480px) {
 
     section {
@@ -590,10 +624,7 @@ form textarea {
     .end {
         padding: 15px 3%;
     }
-}
 
-@media (max-width: 1480px) {
-    
     :root {
         --big-font: 4rem;
         --h2-font: 2.5rem;
@@ -643,10 +674,14 @@ form textarea {
     .contact {
         grid-template-columns: 1fr;
     }
+
+    .home {
+        padding-left: 75px;
+    }
 }
 
 @media (max-width: 576px) {
-    
+
     .dropdown_menu {
         left: 2rem;
         width: unset;
@@ -657,4 +692,3 @@ form textarea {
         margin-right: 0;
     }
 }
-
