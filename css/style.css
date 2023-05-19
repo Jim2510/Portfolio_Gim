@@ -723,4 +723,13 @@ form textarea {
         justify-content: center;
         align-items: center;
     }
+
+    .about-img img {
+        height: 350px;
+        width: 300px;
+    }
+
+    .home-text h1 {
+        font-size: 3.5rem;
+    }
 }
