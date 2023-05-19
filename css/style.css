@@ -11,19 +11,19 @@
 /* VAR */
 
 :root {
-    --bg-color: #1d1d1d;
-    --second-bg-color: #181818;
-    --text-color: #fff;
-    --second-color: #ccc;
-    --main-color: #1bb630;
-    --big-font: 5rem;
-    --h2-font: 3rem;
-    --p-font: 1.1rem;
+    --bg-clr: #1d1d1d;
+    --scnd-bg-clr: #181818;
+    --txt-clr: #fff;
+    --scnd-clr: #ccc;
+    --main-clr: #1bb630;
+    --big-fnt: 5rem;
+    --h2-fnt: 3rem;
+    --p-fnt: 1.1rem;
 }
 
 body {
-    background: var(--bg-color);
-    color: var(--text-color);
+    background: var(--bg-clr);
+    color: var(--txt-clr);
 }
 
 /* NAVBAR */
@@ -59,15 +59,15 @@ header {
 }
 
 .navbar .toggle_btn {
-    color: var(--text-color);
+    color: var(--txt-clr);
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
 }
 
 .action_btn {
-    background: var(--main-color);
-    color: var(--text-color);
+    background: var(--main-clr);
+    color: var(--txt-clr);
     padding: 0.5rem 1rem;
     border: none;
     outline: none;
@@ -80,7 +80,7 @@ header {
 
 .action_btn:hover {
     scale: 1.05;
-    color: var(--text-color);
+    color: var(--txt-clr);
 }
 
 .action_btn:active {
@@ -131,29 +131,29 @@ header a {
 }
 
 header a:hover {
-    color: var(--main-color);
+    color: var(--main-clr);
     transition: 0.45s ease all;
 }
 
 header li a {
     text-decoration: none;
-    color: var(--text-color);
-    font-size: var(--p-font);
+    color: var(--txt-clr);
+    font-size: var(--p-fnt);
 }
 
 header li a:hover {
-    color: var(--main-color);
+    color: var(--main-clr);
 }
 
 .logo {
-    color: var(--text-color);
+    color: var(--txt-clr);
     font-size: 35px;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
 span {
-    color: var(--main-color);
+    color: var(--main-clr);
 }
 
 section {
@@ -188,27 +188,27 @@ section {
     font-size: 20px;
     font-weight: 500;
     border-radius: 5px;
-    background: var(--main-color);
-    color: var(--text-color);
+    background: var(--main-clr);
+    color: var(--txt-clr);
 }
 
 .two {
     display: inline-block;
-    color: var(--second-color);
+    color: var(--scnd-clr);
     font-size: 20px;
     font-weight: 500;
 }
 
 .home-text h1 {
-    font-size: var(--big-font);
+    font-size: var(--big-fnt);
     font-weight: 700;
-    color: var(--text-color);
+    color: var(--txt-clr);
     list-style: 1.1;
     margin: 0 0 8px;
 }
 
 .home-text h3 {
-    color: var(--text-color);
+    color: var(--txt-clr);
     margin: 0 0 35px;
     font-size: 3rem;
     font-weight: 700;
@@ -216,8 +216,8 @@ section {
 }
 
 .home-text p {
-    color: var(--second-color);
-    font-size: var(--p-font);
+    color: var(--scnd-clr);
+    font-size: var(--p-fnt);
     line-height: 1.8;
     margin-bottom: 40px;
 }
@@ -231,9 +231,9 @@ section {
 .btn {
     display: inline-block;
     padding: 12px 28px;
-    background: var(--main-color);
+    background: var(--main-clr);
     border-radius: 5px;
-    color: var(--text-color);
+    color: var(--txt-clr);
     font-size: 1rem;
     letter-spacing: 1px;
     font-weight: 600;
@@ -250,15 +250,15 @@ section {
     justify-content: center;
     font-size: 15px;
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--txt-clr);
     margin-left: 35px;
 }
 
 .btn2 span i {
     height: 55px;
     width: 55px;
-    background: var(--main-color);
-    color: var(--text-color);
+    background: var(--main-clr);
+    color: var(--txt-clr);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -279,31 +279,39 @@ section {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5rem;
+    justify-items: center;
+    padding: 40px 3% 60px !important;
+    background: black;
 }
 
 .about-img img {
-    max-width: 530px;
-    height: auto;
-    width: 100%;
-    border-radius: 8px;
+    max-width: 550px;
+    height: 550px;
+    width: 550px;
+    object-fit: contain;
+    margin-bottom: 80px;
+    filter: grayscale(100%) brightness(90%);
+    border-radius: 50%;
+    border: 1px solid transparent;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .about-text h2 {
-    font-size: var(--h2-font);
+    font-size: var(--h2-fnt);
     line-height: 1;
 }
 
 .about-text h4 {
     font-size: 24px;
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--txt-clr);
     line-height: 1.7;
     margin: 15px 0 30px;
 }
 
 .about-text p {
-    color: var(--second-color);
-    font-size: var(--p-font);
+    color: var(--scnd-clr);
+    font-size: var(--p-fnt);
     line-height: 1.8;
     margin-bottom: 4rem;
 }
@@ -322,13 +330,13 @@ section {
 }
 
 .main-text p {
-    color: var(--second-color);
+    color: var(--scnd-clr);
     font-size: 15px;
     margin-bottom: 15px;
 }
 
 .main-text h2 {
-    font-size: var(--h2-font);
+    font-size: var(--h2-fnt);
     line-height: 1;
 }
 
@@ -359,12 +367,12 @@ section {
 .box h3 {
     font-size: 24px;
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--txt-clr);
     margin-bottom: 15px;
 }
 
 .box p {
-    color: var(--second-color);
+    color: var(--scnd-clr);
     font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 25px;
@@ -373,8 +381,8 @@ section {
 .read {
     display: inline-block;
     padding: 8px 18px;
-    background: var(--main-color);
-    color: var(--text-color);
+    background: var(--main-clr);
+    color: var(--txt-clr);
     font-size: 14px;
     font-weight: 500;
     border-radius: 8px;
@@ -384,7 +392,7 @@ section {
 .read:hover {
     letter-spacing: 1px;
     background: #1bb630b9;
-    color: var(--text-color);
+    color: var(--txt-clr);
 }
 
 .box:hover {
@@ -393,6 +401,10 @@ section {
 }
 
 /* 4TH SECTION */
+
+.portfolio {
+    background: black;
+}
 
 .portfolio-content {
     display: grid;
@@ -443,16 +455,16 @@ section {
 }
 
 .layer p {
-    color: var(--second-color);
+    color: var(--scnd-clr);
     font-size: 1rem;
     line-height: 1.8;
 }
 
 .layer i {
-    color: var(--main-color);
+    color: var(--main-clr);
     margin-top: 20px;
     font-size: 20px;
-    background: var(--text-color);
+    background: var(--txt-clr);
     width: 60px;
     height: 60px;
     display: flex;
@@ -480,7 +492,7 @@ section {
 .git-link:hover {
     letter-spacing: 1px;
     background: #1bb630b9;
-    color: var(--text-color);
+    color: var(--txt-clr);
 }
 
 /* 5TH SECTION (CONTACTS) */
@@ -495,20 +507,20 @@ section {
 }
 
 .contact-text h4 {
-    color: var(--text-color);
+    color: var(--txt-clr);
     margin: 18px 0;
     font-size: 20px;
     font-weight: 600;
 }
 
 .contact-text h2 {
-    font-size: var(--h2-font);
+    font-size: var(--h2-fnt);
     line-height: 1;
 }
 
 .contact-text p {
-    color: var(--second-color);
-    font-size: var(--p-font);
+    color: var(--scnd-clr);
+    font-size: var(--p-fnt);
     line-height: 1.8;
     margin-bottom: 30px;
 }
@@ -523,13 +535,13 @@ section {
 
 .list li a {
     display: block;
-    color: var(--second-color);
+    color: var(--scnd-clr);
     font-size: 14px;
     transition: all .45s ease;
 }
 
 .list li a:hover {
-    color: var(--text-color);
+    color: var(--txt-clr);
     transform: translateX(5px);
 }
 
@@ -538,8 +550,8 @@ section {
 .contact-icons i {
     height: 45px;
     width: 45px;
-    background: var(--main-color);
-    color: var(--text-color);
+    background: var(--main-clr);
+    color: var(--txt-clr);
     font-size: 22px;
     display: inline-flex;
     align-items: center;
@@ -550,8 +562,8 @@ section {
 }
 
 .contact-icons i:hover {
-    background: var(--text-color);
-    color: var(--main-color);
+    background: var(--txt-clr);
+    color: var(--main-clr);
 }
 
 .contact-form form {
@@ -562,8 +574,8 @@ section {
 form textarea {
     width: 100%;
     padding: 14px;
-    background: var(--bg-color);
-    color: var(--text-color);
+    background: var(--bg-clr);
+    color: var(--txt-clr);
     border: none;
     outline: none;
     font-size: 15px;
@@ -579,8 +591,8 @@ form textarea {
 .contact-form .submit {
     display: inline-block;
     font-size: 16px;
-    background: var(--main-color);
-    color: var(--text-color);
+    background: var(--main-clr);
+    color: var(--txt-clr);
     width: 160px;
     transition: all .45s ease;
 }
@@ -597,11 +609,11 @@ form textarea {
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    background: var(--bg-color);
+    background: var(--bg-clr);
 }
 
 .last-text p {
-    color: var(--second-color);
+    color: var(--scnd-clr);
     font-size: 14px;
 }
 
@@ -609,8 +621,8 @@ form textarea {
     padding: 10px;
     border-radius: 8px;
     font-size: 15px;
-    color: var(--text-color);
-    background: var(--main-color);
+    color: var(--txt-clr);
+    background: var(--main-clr);
 }
 
 /*RESPONSIVE STYLE */
@@ -654,11 +666,22 @@ form textarea {
 
     .about {
         grid-template-columns: 1fr;
+
     }
+
+    .about>* {
+        order: 1;
+    }
+
 
     .about-img {
         text-align: center;
-        order: 2;
+        order: 1;
+    }
+
+    .about-img img {
+        height: 400px;
+        width: 350px;
     }
 
     .about-img i {
@@ -691,5 +714,13 @@ form textarea {
         justify-content: flex-end;
         margin-left: 0;
         padding-left: 10px;
+    }
+
+    .box {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

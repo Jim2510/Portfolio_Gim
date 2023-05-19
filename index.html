@@ -14,28 +14,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-        </script>
-        <script type="text/javascript">
-            (function() {
-                // https://dashboard.emailjs.com/admin/account
-                emailjs.init('4DTMws8LQh1mG0OhC');
-            })();
-        </script>
-        <script type="text/javascript">
-            window.onload = function() {
-                document.getElementById('contact-form').addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    // these IDs from the previous steps
-                    emailjs.sendForm('service_5r2ot1w', 'template_urfoice', this)
-                        .then(function() {
-                            alert('SUCCESS!');
-                        }, function(error) {
-                            alert('FAILED...', error);
-                        });
-                });
-            }
-        </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('4DTMws8LQh1mG0OhC');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_5r2ot1w', 'template_urfoice', this)
+                    .then(function () {
+                        alert('SUCCESS!');
+                    }, function (error) {
+                        alert('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 
     <title>Document</title>
 </head>
@@ -44,13 +44,13 @@
     <!--Header -->
 
     <header class="navbar">
-        <div class="logo"><a href="">Gim_dev</a></div>
+        <div class="logo"><a href="#home">Gim_dev</a></div>
         <ul class="links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contacts</a></li>
+            <li><a href="#home"><b>Home</b></a></li>
+            <li><a href="#about"><b>About</b></a></li>
+            <li><a href="#services"><b>Services</b></a></li>
+            <li><a href="#portfolio"><b>Portfolio</b></a></li>
+            <li><a href="#contact"><b>Contacts</b></a></li>
         </ul>
         <a href="#about" class="action_btn">Start</a>
         <div class="toggle_btn">
@@ -67,7 +67,7 @@
             <!-- <li><a class="action_btn" href="#">Start</a></li> -->
         </div>
     </header>
-    
+
 
     <!-- Header section FE -->
 
@@ -92,7 +92,7 @@
 
     <section class="about" id="about">
         <div class="about-img">
-            <img src="" alt="">
+            <img src="imgs/My project-1.png" alt="">
         </div>
         <div class="about-text">
             <h2>About <span>Me</span></h2>
@@ -142,7 +142,7 @@
     <section class="portfolio" id="portfolio">
         <div class="main-text">
             <p>Portfolio</p>
-            <h2>Latest <span>Project</span></h2>
+            <h2>Latest <span>Projects</span></h2>
         </div>
         <div class="portfolio-content">
 
@@ -221,8 +221,8 @@
 
     <section class="contact" id="contact">
         <div class="contact-text">
-            <h2>Contact <span>Me!</span></h2>
             <h4>Any Project In Mind?</h4>
+            <h2>Contact <span>Me!</span></h2>
             <p></p>
             <div class="list">
                 <li><a href="#contact">gmguglielmino@gmail.com</a></li>
@@ -234,7 +234,8 @@
                 <a target="_blank" href="https://www.instagram.com/james.2510/"><i
                         class="fa-brands fa-instagram"></i></a>
                 <a target="_blank" href=""><i class="fa-brands fa-reddit"></i></a>
-                <a target="_blank" href="https://soundcloud.com/guglielmino2510"><i class="fa-brands fa-soundcloud"></i></a>
+                <a target="_blank" href="https://soundcloud.com/guglielmino2510"><i
+                        class="fa-brands fa-soundcloud"></i></a>
             </div>
         </div>
         <div class="contact-form">
@@ -242,7 +243,8 @@
                 <input id="fullName" type="name" placeholder="Your Name*" required>
                 <input id="email_id" type="email" placeholder="Your Email Address*" required>
                 <input id="phone_number" type="text" placeholder="Your Mobile Number">
-                <textarea name="" id="message" cols="35" rows="10" placeholder="How Can I Help You?" required></textarea>
+                <textarea name="" id="message" cols="35" rows="10" placeholder="How Can I Help You?"
+                    required></textarea>
                 <input type="submit" class="submit" required>
             </form>
         </div>
@@ -259,7 +261,7 @@
 
 
     <script src="script/script.js"></script>
-    
+
 </body>
 
 </html>
