@@ -351,7 +351,7 @@ section {
 /* SERVICES CARDS */
 
 .box {
-    background: #000000b0;
+    background: #00000063;
     padding: 35px 45px;
     border-radius: 8px;
     transition: all .45s ease;
@@ -397,6 +397,7 @@ section {
 
 .box:hover {
     transform: translateY(-8px);
+    background: #000000d5;
     cursor: pointer;
 }
 
