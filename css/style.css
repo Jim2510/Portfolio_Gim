@@ -33,7 +33,7 @@ header {
     top: 0;
     z-index: 10000;
     padding: 0 2rem;
-    background: #07070777;
+    background: #000000b9;
     backdrop-filter: blur(15px);
     width: 100%;
 }
@@ -45,7 +45,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: solid #2a2a2a73 1px;
+    border-bottom: solid #00000073 1px;
 }
 
 .navbar.logo a {
@@ -169,6 +169,7 @@ section {
     background-image: url(../imgs/Meteor.svg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -321,6 +322,7 @@ section {
 .services {
     background: url(../imgs/Meteor\ \(3\).svg);
     background-repeat: no-repeats;
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
@@ -501,6 +503,7 @@ section {
 .contact {
     background: url(../imgs/Meteor\ \(1\).svg);
     background-size: cover;
+    background-attachment: fixed;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
