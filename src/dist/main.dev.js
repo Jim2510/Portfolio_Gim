@@ -57,3 +57,18 @@ function isElementInViewport(element) {
   var rect = element.getBoundingClientRect();
   return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
 }
+
+ScrollReveal().reveal('.main-text', {
+  distance: '50px',
+  origin: 'bottom',
+  duration: 1000,
+  opacity: 0
+});
+ScrollReveal().reveal('.row', {
+  distance: '50px',
+  origin: 'bottom',
+  duration: 1000,
+  opacity: 0,
+  interval: 200 // Intervallo tra l'apparizione di ogni carta dei progetti
+
+});
