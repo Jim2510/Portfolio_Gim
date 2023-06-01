@@ -1,3 +1,16 @@
+const toggleBtn = document.querySelector('.toggle_btn')
+const toggleBtnIcon = document.querySelector('.toggle_btn i')
+const dropDownMenu = document.querySelector('.dropdown_menu')
+
+toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+
+    toggleBtnIcon.classList = isOpen ?
+        'fa-solid fa-xmark' :
+        'fa-solid fa-bars'
+};
+
 // Inizializza ScrollReveal
 ScrollReveal().reveal('.box', {
     delay: 200,
@@ -12,14 +25,14 @@ window.addEventListener('DOMContentLoaded', () => {
         delay: 300,
         distance: '50px',
         origin: 'left',
-        duration: 1000
+        duration: 2000
     });
 
     ScrollReveal().reveal('.about-text', {
         distance: '100px',
         origin: 'right',
-        duration: 1000, // Aggiornato: aumenta il valore per rendere l'animazione più lenta
-        delay: 1000,
+        duration: 2000, // Aggiornato: aumenta il valore per rendere l'animazione più lenta
+        delay: 300,
         interval: 0,
         reset: false,
         useDelay: 'always',
