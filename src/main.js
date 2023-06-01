@@ -9,7 +9,7 @@ ScrollReveal().reveal('.box', {
 
 window.addEventListener('DOMContentLoaded', () => {
     ScrollReveal().reveal('.home-text', {
-        delay: 1000,
+        delay: 300,
         distance: '50px',
         origin: 'left',
         duration: 1000
@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
         distance: '100px',
         origin: 'right',
         duration: 1000, // Aggiornato: aumenta il valore per rendere l'animazione più lenta
-        delay: 200,
+        delay: 1000,
         interval: 0,
         reset: false,
         useDelay: 'always',
