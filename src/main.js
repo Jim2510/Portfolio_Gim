@@ -1,3 +1,6 @@
+import ScrollReveal from '../../node_modules/scrollreveal/dist/scrollreveal.min.js';
+
+
 const toggleBtn = document.querySelector('.toggle_btn')
 const toggleBtnIcon = document.querySelector('.toggle_btn i')
 const dropDownMenu = document.querySelector('.dropdown_menu')
