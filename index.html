@@ -36,6 +36,10 @@
             });
         }
     </script>
+    <script src="script/script.js"></script>
+    <script type="module" src="dist/bundle.js"></script>
+    <script type="module" src="src/main.js"></script>
+    <script src="../node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
 
     <title>Document</title>
 </head>
@@ -72,7 +76,7 @@
     <!-- Header section FE -->
 
     <section class="home" id="home">
-        <div class="home-text">
+        <div class="home-text" data-sr="wait 1s, enter left and move 50px over 1s">
             <div class="slide">
                 <span class="one">Hello</span>
                 <span class="two">I'm</span>
@@ -110,7 +114,7 @@
             <h2><span>My</span> Services</h2>
         </div>
         <div class="services-content">
-            <div class="box">
+            <div class="box" onmouseover="enlargeCard(this)" onmouseout="resetCard(this)">
                 <div class="s-icons">
                     <i class="fa-sharp fa-solid fa-mobile-button"></i>
                 </div>
@@ -118,7 +122,7 @@
                 <p>No description</p>
                 <a href="" class="read">Read More</a>
             </div>
-            <div class="box">
+            <div class="box" onmouseover="enlargeCard(this)" onmouseout="resetCard(this)">
                 <div class="s-icons">
                     <i class="fa-solid fa-code"></i>
                 </div>
@@ -126,7 +130,7 @@
                 <p>No description</p>
                 <a href="" class="read">Read More</a>
             </div>
-            <div class="box">
+            <div class="box" onmouseover="enlargeCard(this)" onmouseout="resetCard(this)">
                 <div class="s-icons">
                     <i class="fa-sharp fa-solid fa-pen-nib"></i>
                 </div>
@@ -262,7 +266,7 @@
     </section>
 
 
-    <script src="script/script.js"></script>
+
 
 </body>
 
