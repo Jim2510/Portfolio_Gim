@@ -83,3 +83,60 @@ ScrollReveal().reveal('.row', {
     opacity: 0,
     interval: 200, // Intervallo tra l'apparizione di ogni carta dei progetti
 });
+
+// Seleziona tutti i pulsanti "Read More"
+const readMoreButtons = document.querySelectorAll('.read');
+
+// Seleziona l'elemento di overlay
+const overlay = document.getElementById('overlay');
+
+// Aggiungi l'evento di click a ciascun pulsante
+readMoreButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    overlay.style.display = 'flex';
+  });
+});
+
+// Aggiungi l'evento di click al pulsante di chiusura
+let closeBtn = document.querySelector('.close-btn');
+closeBtn.addEventListener('click', function() {
+  let overlay = document.querySelector('.overlay');
+  overlay.style.display = 'none';
+});
+
+// Aggiungi un flag per tenere traccia dello stato dell'overlay
+let isOverlayOpen = false;
+
+// Funzione per disabilitare lo scroll
+function disableScroll() {
+  document.body.style.overflow = 'hidden';
+}
+
+// Funzione per abilitare lo scroll
+function enableScroll() {
+  document.body.style.overflow = 'auto';
+}
+
+// Aggiungi l'evento di click a ciascun pulsante "Read More"
+readMoreButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    overlay.style.display = 'flex';
+    disableScroll(); // Disabilita lo scroll quando l'overlay viene aperto
+    isOverlayOpen = true; // Imposta il flag a true
+  });
+});
+
+// Aggiungi l'evento di click al pulsante di chiusura
+closeBtn.addEventListener('click', function() {
+  overlay.style.display = 'none';
+  enableScroll(); // Abilita lo scroll quando l'overlay viene chiuso
+  isOverlayOpen = false; // Imposta il flag a false
+});
+
+// Aggiungi un gestore di eventi per lo scroll della pagina
+window.addEventListener('scroll', () => {
+  if (isOverlayOpen) {
+    // Se l'overlay è aperto, reimposta la posizione dello scroll sulla cima
+    window.scrollTo(0, 0);
+  }
+});

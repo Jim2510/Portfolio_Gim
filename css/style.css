@@ -417,6 +417,37 @@ section {
     transition: translateY(-8px) 0.5 ease-in-out;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+  
+  .overlay-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative; /* Aggiunto */
+  }
+  
+  .close-btn {
+    color: #000;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+  }
+  
+
 /* 4TH SECTION */
 
 .portfolio {
