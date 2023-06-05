@@ -1,125 +1,84 @@
 "use strict";
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var toggleBtn = document.querySelector('.toggle_btn');
 var toggleBtnIcon = document.querySelector('.toggle_btn i');
 var dropDownMenu = document.querySelector('.dropdown_menu');
-
-toggleBtn.onclick = function () {
+toggleBtn.addEventListener('click', function () {
   dropDownMenu.classList.toggle('open');
-  var isOpen = dropDownMenu.classList.contains('open');
-  toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
-}; // Inizializza ScrollReveal
-
-
-ScrollReveal().reveal('.box', {
+  toggleBtnIcon.classList.toggle('fa-xmark');
+  toggleBtnIcon.classList.toggle('fa-bars');
+});
+var revealOptions = {
   delay: 200,
   distance: '50px',
   origin: 'bottom',
   easing: 'ease-out',
   interval: 200
-});
-window.addEventListener('DOMContentLoaded', function () {
-  ScrollReveal().reveal('.home-text', {
-    delay: 300,
-    distance: '50px',
-    origin: 'left',
-    duration: 2000
-  });
-  ScrollReveal().reveal('.about-text', {
-    distance: '100px',
-    origin: 'right',
-    duration: 2000,
-    // Aggiornato: aumenta il valore per rendere l'animazione più lenta
-    delay: 300,
-    interval: 0,
-    reset: false,
-    useDelay: 'always',
-    beforeReveal: function beforeReveal(el) {
-      el.classList.add('show'); // Aggiunge la classe 'show' per mostrare il testo
-    }
-  });
-}); // Ottieni l'elemento about-text
-
-var aboutText = document.querySelector('.about-text'); // Aggiungi un flag per controllare se l'elemento è già stato mostrato
-
-var isAboutTextShown = false; // Aggiungi un gestore di eventi per lo scroll della pagina
-
-window.addEventListener('scroll', function () {
-  // Verifica se l'elemento about-text è visibile e se non è già stato mostrato
-  if (isElementInViewport(aboutText) && !isAboutTextShown) {
-    // Mostra l'elemento about-text
-    aboutText.classList.add('show');
-    isAboutTextShown = true; // Imposta il flag a true per indicare che l'elemento è stato mostrato
+};
+ScrollReveal().reveal('.box', revealOptions);
+ScrollReveal().reveal('.home-text', _objectSpread({}, revealOptions, {
+  origin: 'left',
+  duration: 2000
+}));
+ScrollReveal().reveal('.about-text', _objectSpread({}, revealOptions, {
+  origin: 'right',
+  duration: 2000,
+  beforeReveal: function beforeReveal(el) {
+    el.classList.add('show');
   }
-}); // Funzione per verificare se un elemento è visibile nella viewport
+}));
+var aboutText = document.querySelector('.about-text');
+var isAboutTextShown = false;
+window.addEventListener('scroll', function () {
+  if (isElementInViewport(aboutText) && !isAboutTextShown) {
+    aboutText.classList.add('show');
+    isAboutTextShown = true;
+  }
+});
 
 function isElementInViewport(element) {
   var rect = element.getBoundingClientRect();
   return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
 }
 
-ScrollReveal().reveal('.main-text', {
-  distance: '50px',
+ScrollReveal().reveal('.main-text', _objectSpread({}, revealOptions, {
   origin: 'bottom',
   duration: 1000,
   opacity: 0
-});
-ScrollReveal().reveal('.row', {
-  distance: '50px',
+}));
+ScrollReveal().reveal('.row', _objectSpread({}, revealOptions, {
   origin: 'bottom',
   duration: 1000,
   opacity: 0,
-  interval: 200 // Intervallo tra l'apparizione di ogni carta dei progetti
-
-}); // Seleziona tutti i pulsanti "Read More"
-
-var readMoreButtons = document.querySelectorAll('.read'); // Seleziona l'elemento di overlay
-
-var overlay = document.getElementById('overlay'); // Aggiungi l'evento di click a ciascun pulsante
-
+  interval: 200
+}));
+var readMoreButtons = document.querySelectorAll('.read');
+var overlay = document.getElementById('overlay');
+var closeBtn = document.querySelector('.close-btn');
+var isOverlayOpen = false;
 readMoreButtons.forEach(function (button) {
   button.addEventListener('click', function () {
     overlay.style.display = 'flex';
+    disableScroll();
+    isOverlayOpen = true;
   });
-}); // Aggiungi l'evento di click al pulsante di chiusura
-
-var closeBtn = document.querySelector('.close-btn');
+});
 closeBtn.addEventListener('click', function () {
-  var overlay = document.querySelector('.overlay');
   overlay.style.display = 'none';
-}); // Aggiungi un flag per tenere traccia dello stato dell'overlay
-
-var isOverlayOpen = false; // Funzione per disabilitare lo scroll
+  enableScroll();
+  isOverlayOpen = false;
+});
 
 function disableScroll() {
   document.body.style.overflow = 'hidden';
-} // Funzione per abilitare lo scroll
-
+}
 
 function enableScroll() {
   document.body.style.overflow = 'auto';
-} // Aggiungi l'evento di click a ciascun pulsante "Read More"
-
-
-readMoreButtons.forEach(function (button) {
-  button.addEventListener('click', function () {
-    overlay.style.display = 'flex';
-    disableScroll(); // Disabilita lo scroll quando l'overlay viene aperto
-
-    isOverlayOpen = true; // Imposta il flag a true
-  });
-}); // Aggiungi l'evento di click al pulsante di chiusura
-
-closeBtn.addEventListener('click', function () {
-  overlay.style.display = 'none';
-  enableScroll(); // Abilita lo scroll quando l'overlay viene chiuso
-
-  isOverlayOpen = false; // Imposta il flag a false
-}); // Aggiungi un gestore di eventi per lo scroll della pagina
-
-window.addEventListener('scroll', function () {
-  if (isOverlayOpen) {
-    // Se l'overlay è aperto, reimposta la posizione dello scroll sulla cima
-    window.scrollTo(0, 0);
-  }
-});
+}
