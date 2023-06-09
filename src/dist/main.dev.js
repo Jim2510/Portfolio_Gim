@@ -9,11 +9,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var toggleBtn = document.querySelector('.toggle_btn');
 var toggleBtnIcon = document.querySelector('.toggle_btn i');
 var dropDownMenu = document.querySelector('.dropdown_menu');
-toggleBtn.addEventListener('click', function () {
-  dropDownMenu.classList.toggle('open');
-  toggleBtnIcon.classList.toggle('fa-xmark');
-  toggleBtnIcon.classList.toggle('fa-bars');
-});
 var revealOptions = {
   delay: 200,
   distance: '50px',
@@ -21,6 +16,17 @@ var revealOptions = {
   easing: 'ease-out',
   interval: 200
 };
+var aboutText = document.querySelector('.about-text');
+var readMoreButtons = document.querySelectorAll('.read');
+var overlay = document.getElementById('overlay');
+var closeBtn = document.querySelector('.close-btn');
+var isAboutTextShown = false;
+var isOverlayOpen = false;
+toggleBtn.addEventListener('click', function () {
+  dropDownMenu.classList.toggle('open');
+  toggleBtnIcon.classList.toggle('fa-xmark');
+  toggleBtnIcon.classList.toggle('fa-bars');
+});
 ScrollReveal().reveal('.box', revealOptions);
 ScrollReveal().reveal('.home-text', _objectSpread({}, revealOptions, {
   origin: 'left',
@@ -33,20 +39,12 @@ ScrollReveal().reveal('.about-text', _objectSpread({}, revealOptions, {
     el.classList.add('show');
   }
 }));
-var aboutText = document.querySelector('.about-text');
-var isAboutTextShown = false;
 window.addEventListener('scroll', function () {
   if (isElementInViewport(aboutText) && !isAboutTextShown) {
     aboutText.classList.add('show');
     isAboutTextShown = true;
   }
 });
-
-function isElementInViewport(element) {
-  var rect = element.getBoundingClientRect();
-  return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
-}
-
 ScrollReveal().reveal('.main-text', _objectSpread({}, revealOptions, {
   origin: 'bottom',
   duration: 1000,
@@ -58,10 +56,6 @@ ScrollReveal().reveal('.row', _objectSpread({}, revealOptions, {
   opacity: 0,
   interval: 200
 }));
-var readMoreButtons = document.querySelectorAll('.read');
-var overlay = document.getElementById('overlay');
-var closeBtn = document.querySelector('.close-btn');
-var isOverlayOpen = false;
 readMoreButtons.forEach(function (button) {
   button.addEventListener('click', function () {
     overlay.style.display = 'flex';
@@ -74,6 +68,11 @@ closeBtn.addEventListener('click', function () {
   enableScroll();
   isOverlayOpen = false;
 });
+
+function isElementInViewport(element) {
+  var rect = element.getBoundingClientRect();
+  return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+}
 
 function disableScroll() {
   document.body.style.overflow = 'hidden';
