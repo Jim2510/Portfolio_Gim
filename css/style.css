@@ -797,6 +797,10 @@ form textarea {
 
 @media (max-width: 576px) {
 
+    .navbar .logo a img {
+        margin-left: -25px
+    }
+
     .one {
         font-size: 30px;
     }
