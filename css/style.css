@@ -164,7 +164,7 @@ section {
 
 .home {
     position: relative;
-    height: 100vh;
+    height: 90vh !important;
     width: 100%;
     background-image: url(../imgs/Meteor.svg);
     background-size: cover;
@@ -212,7 +212,7 @@ section {
 .home-text h3 {
     color: var(--txt-clr);
     margin: 0 0 35px;
-    font-size: 50px !important;
+    font-size: 60px !important;
     font-weight: 700;
     line-height: 1.1;
 }
@@ -782,6 +782,8 @@ form textarea {
         text-align: center;
         opacity: 1 !important;
         transform: none !important;
+        margin: 20px auto;
+
     }
 
     .contact {
@@ -794,6 +796,22 @@ form textarea {
 }
 
 @media (max-width: 576px) {
+
+    .one {
+        font-size: 30px;
+    }
+
+    .two {
+        font-size: 30px;
+    }
+
+    .home-text h1 {
+        letter-spacing: 1px;
+    }
+
+    .home-text h3 {
+        font-size: 36px !important;
+    }
 
     .dropdown_menu {
         left: 2rem;
@@ -817,6 +835,7 @@ form textarea {
     .about-img img {
         height: 350px;
         width: 300px;
+        margin: 0 auto;
     }
 
     .home-text h1 {
