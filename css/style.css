@@ -48,9 +48,9 @@ header {
     border-bottom: solid #00000073 1px;
 }
 
-.navbar.logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
+.navbar .logo a img{
+    width: 140px ;
+    margin-top: 5px;
 }
 
 .navbar .links {
@@ -172,21 +172,21 @@ section {
     background-attachment: fixed;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding-left: 200px;
+    justify-content: center;
 }
 
 .slide {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    display: flex;
+    align-items: center;
 }
 
 .one {
     display: inline-block;
     margin-right: 15px;
-    height: 32px;
-    padding: 0 15px;
+    padding: 15px;
     line-height: 32px;
-    font-size: 20px;
+    font-size: 60px;
     font-weight: 500;
     border-radius: 5px;
     background: var(--main-clr);
@@ -196,7 +196,7 @@ section {
 .two {
     display: inline-block;
     color: var(--scnd-clr);
-    font-size: 20px;
+    font-size: 60px;
     font-weight: 500;
 }
 
@@ -206,12 +206,13 @@ section {
     color: var(--txt-clr);
     list-style: 1.1;
     margin: 0 0 8px;
+    letter-spacing: 6px;
 }
 
 .home-text h3 {
     color: var(--txt-clr);
     margin: 0 0 35px;
-    font-size: 3rem;
+    font-size: 50px !important;
     font-weight: 700;
     line-height: 1.1;
 }
@@ -242,7 +243,7 @@ section {
 }
 
 .btn:hover {
-    transform: scale(0.9);
+    transform: scale(1.1);
 }
 
 .btn2 {
@@ -252,7 +253,7 @@ section {
     font-size: 15px;
     font-weight: 600;
     color: var(--txt-clr);
-    margin-left: 35px;
+    margin-left: 70px;
 }
 
 .btn2 span i {
@@ -295,9 +296,11 @@ section {
     border-radius: 50%;
     border: 1px solid transparent;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin-right: -100px;
 }
 
 .about-text {
+    margin-left: -100px;
     opacity: 0;
     transform: translateX(50px);
     transition: opacity 0.5s ease, transform 0.5s ease;
